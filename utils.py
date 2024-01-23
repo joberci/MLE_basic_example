@@ -17,3 +17,17 @@ def configure_logging() -> None:
     """Configures logging"""
     logging.basicConfig(level=logging.INFO, 
                         format='%(asctime)s - %(levelname)s - %(message)s')
+
+
+def is_directory_exists(directory_path: str) -> bool:
+    """
+    Check if a directory exists.
+
+    Parameters:
+    - directory_path (str): The path of the directory to check.
+
+    Returns:
+    - bool: True if the directory exists, False otherwise.
+    """
+    return os.path.exists(directory_path) and os.path.isdir(directory_path)
+

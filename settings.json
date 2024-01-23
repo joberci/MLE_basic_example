@@ -1,19 +1,26 @@
 {
     "general": {
-        "random_state": 42,
+        "random_state": 23,
         "status": "test",
         "datetime_format": "%d.%m.%Y_%H.%M",
         "data_dir": "data",
         "models_dir": "models",
-        "results_dir": "results"
+        "results_dir": "results",
+        "target_variable": "species",
+        "inference_size": 0.1
     },
     "train": {
-        "table_name": "xor_train_data.csv",
+        "table_name": "iris_train_data.csv",
         "data_sample": 50,
-        "test_size": 0.3
+        "test_size": 0.3,
+        "batch_size": 32,
+        "epochs": 200,
+        "learning_rate": 0.01,
+        "verbose": 10,
+        "plot": 0
     },
     "inference": {
-        "inp_table_name": "xor_inference_data.csv",
+        "inp_table_name": "iris_inference_data.csv",
         "model_name": "prod_model.pickle" 
     }
 }

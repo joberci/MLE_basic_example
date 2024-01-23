@@ -14,6 +14,9 @@ COPY data/ /app/data
 # Copy models folder to Docker
 COPY models/${model_name} /app/models/${model_name}.pickle
 
+# Copy scaler.pickle to Docker
+COPY scaler.pickle /app/scaler.pickle
+
 # Copy the code itself
 COPY inference /app/inference
 
@@ -26,4 +29,5 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Train the model
-RUN python3 inference/run.py
+#RUN python3 inference/run.py
+CMD ["python3", "inference/run.py"]

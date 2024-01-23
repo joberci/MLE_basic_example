@@ -5,13 +5,11 @@ __pycache__/
 .idea
 
 # Directories
-data/
 models/
 results/
 mlruns/
 
 # File Extensions
-*.csv
 *.pickle
 *.pyc
 
